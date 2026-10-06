@@ -21,12 +21,22 @@ def calcular_ingreso(pasajeros, precio):
 
 # ===== DEVELOPER 3: baja ocupación y resultados =====
 def es_baja_ocupacion(pasajeros):
-    pass
+    return pasajeros < 50
 
 
 def procesar_vuelos(vuelos):
-    pass
-
+    resultados = {}
+    for codigo, datos in vuelos.items():
+        pasajeros = datos["pasajeros"]
+        precio = datos["precio"]
+        resultados[codigo] = {
+            "pasajeros": pasajeros,
+            "precio_original": precio,
+            "precio_final": calcular_precio_final(precio),
+            "ingreso": calcular_ingreso(pasajeros, precio),
+            "baja_ocupacion": es_baja_ocupacion(pasajeros),
+        }
+    return resultados
 
 # ===== DEVELOPER 4: orden, total global y reporte =====
 def ordenar_por_ingreso(resultados):
