@@ -4,11 +4,13 @@ vuelos = {}
 
 # ===== DEVELOPER 2: ingresos y descuento =====
 def calcular_precio_final(precio):
-    pass
+    if precio > 500:
+        return precio * 0.85
+    return precio
 
 
 def calcular_ingreso(pasajeros, precio):
-    pass
+    return pasajeros * calcular_precio_final(precio)
 
 
 # ===== DEVELOPER 3: baja ocupación y resultados =====
