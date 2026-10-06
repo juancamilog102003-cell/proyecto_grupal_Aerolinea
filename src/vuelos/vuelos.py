@@ -1,5 +1,11 @@
 # ===== DEVELOPER 1: estructura de datos =====
-vuelos = {}
+vuelos = {
+    "AV101": {"pasajeros": 120, "precio": 450},
+    "LA202": {"pasajeros": 45, "precio": 620},
+    "AA303": {"pasajeros": 80, "precio": 500},
+    "CM404": {"pasajeros": 30, "precio": 800},
+    "VV505": {"pasajeros": 150, "precio": 380},
+}
 
 
 # ===== DEVELOPER 2: ingresos y descuento =====
